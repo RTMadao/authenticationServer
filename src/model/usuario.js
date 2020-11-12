@@ -29,7 +29,7 @@ usuarioSchema.methods.toJSON = function() {
 
 //se agrega pluguin de validacion unica
 usuarioSchema.plugin(uniqueValidator, {
-    message: '{PATH} debe de ser único'
+    message: '{PATH} ya existe en el sistema'
 })
 
-module.exports = mongoose.model('Usuarios', usuarioSchema)
+module.exports = mongoose.model('usuarios', usuarioSchema)
