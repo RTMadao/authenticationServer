@@ -10,9 +10,7 @@ router.post('/',async (req, res) => {
             password: bcrypt.hashSync(req.body.password, 10),
             restaurant: req.body.restaurant
         });
-        
         const respuesta = await usuario.save()
-
         res.json({
             ok: true,
             usuario: respuesta
